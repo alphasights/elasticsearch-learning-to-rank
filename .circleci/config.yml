@@ -1,0 +1,15 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: quepid/es-plugin-test
+              environment:
+                MAX_HEAP_SIZE: 4096m
+                HEAP_NEWSIZE: 1024m
+        steps:
+            - checkout
+            - run: 
+                environment: 
+                   GRADLE_OPTS: -Xmx4096m  
+                name: Full ES Plugin Build ('clean and check')
+                command: ./gradlew clean check --no-daemon -Dtests.jvms=1
