@@ -1,0 +1,17 @@
+{
+  "ltr.list_stores": {
+    "stability": "stable",
+    "visibility": "public",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr",
+          "methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "body": null
+  }
+}
