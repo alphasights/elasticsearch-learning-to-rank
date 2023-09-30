@@ -1,0 +1,10 @@
+language: java
+install: true
+dist: xenial
+
+jdk:
+  - openjdk14
+
+
+script:
+  - ./gradlew clean check
